@@ -1,11 +1,8 @@
 # Next.js × Laravel の環境構築
 
-```
-
 ## コンテナ起動
-
 ```sh
-make up
+make init
 ```
 
 ## Laravelインストール

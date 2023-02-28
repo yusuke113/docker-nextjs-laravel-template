@@ -48,10 +48,9 @@ init:
 	@echo "\033[1;32mDocker環境のセットアップ中...\033[0m"
 	@make build
 	@make up
-	docker-compose exec api cp .env.example .env
 	docker-compose exec api composer install
 	docker-compose exec api php artisan key:generate
-	docker-compose run --rm front npm i
+	docker-compose exec --rm front npm i
 	@make migrate
 	@make seed
 	@make up
