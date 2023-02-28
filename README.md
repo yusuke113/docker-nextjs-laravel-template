@@ -1,31 +1,13 @@
 # Next.js × Laravel の環境構築
 
-## コンテナ起動
+## 初期構築
 ```sh
 make init
 ```
 
-## Laravelインストール
+## ブラウザ
 
-```sh
-docker-compose exec api composer create-project laravel/laravel . "9.*"
-```
-
-`api`ディレクトリ内にLaravelがインストールされる
-
-`localhost:80`にアクセスするとLaravelのウェルカムページが表示される
-
-## Next.jsインストール
-
-```sh
-docker-compose exec front yarn create next-app  --typescript .
-
-# 開発用サーバー起動
-docker-compose exec front yarn dev
-```
-
-`front`ディレクトリ内にNext.jsがインストールされる
-
-`localhost:3000`にアクセスするとNext.jsのウェルカムページが表示される
-
-開発用サーバーの停止は`control + c`
+- バックエンド
+http://localhost:80
+- フロントエンド
+http://localhost:3000

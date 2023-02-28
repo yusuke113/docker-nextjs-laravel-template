@@ -50,7 +50,7 @@ init:
 	@make up
 	docker-compose exec api composer install
 	docker-compose exec api php artisan key:generate
-	docker-compose exec --rm front npm i
+	docker-compose exec front npm i
 	@make migrate
 	@make seed
 	@make up
@@ -63,13 +63,13 @@ remake:
 	@make up
 	docker-compose exec api composer install
 	docker-compose exec api php artisan key:generate
-	docker-compose run --rm front npm i
+	docker-compose exec front npm i
 	@make migrate
 	@make seed
 	@make up
 
 create-network:
-	-@docker network create survey-factory_net
+	-@docker network create app_net
 
 ps:
 	docker ps -a
